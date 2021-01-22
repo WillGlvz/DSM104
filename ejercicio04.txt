@@ -1,0 +1,58 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package guide;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author willg
+ */
+public class example {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        Scanner Scan = new Scanner(System.in);
+        System.out.print("Indique la cantidad de puntos a ingresar: ");
+        int cantidad = Scan.nextInt();
+        int x[] = new int[cantidad];
+        int y[] = new int[cantidad];
+        for (int i = 0; i < x.length; i++) {
+            Scanner Scan2 = new Scanner(System.in);
+            System.out.println("Ingrese el par " + i + " de puntos");
+            System.out.print("Valor de x: ");
+            int coorx = Scan2.nextInt();
+            x[i] = coorx;
+            System.out.print("Valor de y: ");
+            int coory = Scan2.nextInt();
+            y[i] = coory;
+        }
+        
+        for (int i = 0; i < y.length; i++) {
+            if (x[i] > 0 && y[i] > 0) {
+                System.err.println("El par ordenado (" + x[i] + ", " + y[i] + ") se encuentra en el primer cuadrante.");
+            }else if (x[i] < 0 && y[i] > 0) {
+                System.err.println("El par ordenado (" + x[i] + ", " + y[i] + ") se encuentra en el segundo cuadrante.");
+            }else if (x[i] < 0 && y[i] < 0) {
+                System.err.println("El par ordenado (" + x[i] + ", " + y[i] + ") se encuentra en el tercer cuadrante.");
+            }else if (x[i] > 0 && y[i] < 0) {
+                System.err.println("El par ordenado (" + x[i] + ", " + y[i] + ") se encuentra en el cuarto cuadrante.");
+            }else if (x[i] == 0 && y[i] == 0) {
+                System.err.println("El par ordenado (" + x[i] + ", " + y[i] + ") se encuentra en el origen.");
+            }else if (x[i] == 0 && y[i] > 0) {
+                System.err.println("El par ordenado (" + x[i] + ", " + y[i] + ") se encuentra en el eje Y positivo.");
+            }else if (x[i] == 0 && y[i] < 0) {
+                System.err.println("El par ordenado (" + x[i] + ", " + y[i] + ") se encuentra en el eje Y negativo.");
+            }else if (x[i] < 0 && y[i] == 0) {
+                System.err.println("El par ordenado (" + x[i] + ", " + y[i] + ") se encuentra en el eje X negativo.");
+            }else if (x[i] > 0 && y[i] == 0) {
+                System.err.println("El par ordenado (" + x[i] + ", " + y[i] + ") se encuentra en el eje X positivo.");
+            }
+        }
+    }
+}
