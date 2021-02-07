@@ -1,0 +1,42 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in 
+ */
+package guide;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author willg
+ */
+public class example {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        double notas[] = new double[10];
+        String alumno[] = new String[10];
+        for (int i = 0; i < notas.length; i++) {
+            Scanner Scan = new Scanner(System.in);
+            System.out.print("Ingrese el nombre del estudiante " + i + ": ");
+            String name = Scan.nextLine();
+            alumno[i] = name;
+            System.out.print("Ingrese la respectiva nota: ");
+            Double calificacion = Scan.nextDouble();
+            notas[i] = calificacion;
+        }
+        
+        for (int i = 0; i < notas.length; i++) {
+            if (notas[i] < 7.00) {
+                System.out.println("El estudiante " + alumno[i] + " (Nota de  "+ notas[i] +") tiene una calificación menor a 7.");
+            }else if (notas[i] > 7.00) {
+                System.out.println("El estudiante " + alumno[i] + " (Nota de  "+ notas[i] +") tiene una calificación mayor a 7.");
+            }else if (notas[i] == 7.00) {
+                System.out.println("El estudiante " + alumno[i] + " (Nota de  "+ notas[i] +") tiene una calificación igual a 7.");
+            }
+        }
+    }
+}

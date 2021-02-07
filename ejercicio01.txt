@@ -1,0 +1,32 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the
+ */
+package guide;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author willg
+ */
+public class example {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        Scanner Scan = new Scanner(System.in);
+        System.out.print("Ingrese el numerador: ");
+        int numero1 = Scan.nextInt();
+        System.out.print("Ingrese el denominador: ");
+        int numero2 = Scan.nextInt();
+        int res = numero1%numero2;
+        if (res == 0) {
+            System.out.print("Lo números ingresados son divisibles entre sí.");
+        }else{
+            System.out.print("Los números no son divisibles entre sí.");
+        }
+    }
+}
