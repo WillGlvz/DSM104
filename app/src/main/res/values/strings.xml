@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Operario</string>
+    <string name="lbltitle">Datos del operario</string>
+    <string name="xtxsu">Sueldo</string>
+    <string name="txta">Años de antiguedad</string>
+    <string name="lbla">Años</string>
+    <string name="btnenviar">Enviar datos</string>
+
+    <string name="lblsuelod2">Sueldo</string>
+    <string name="lblanios">Años</string>
+    <string name="lblnews">Nuevo sueldo</string>
+    <string name="btnback">Regresar</string>
+</resources>
